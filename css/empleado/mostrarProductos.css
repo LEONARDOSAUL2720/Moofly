@@ -1,0 +1,214 @@
+/* Estilos generales del body */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif; /* Cambia la fuente a una más adecuada para una cafetería */
+    background-color: #fffbef;
+    font-family: 'Morganite free font';
+  
+
+  }
+  
+ /* Estilos para el encabezado */
+.header-container {
+    background-color: #987653;
+    color: #17020d;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: row; /* Cambiar la dirección del flex a fila */
+    justify-content: space-around; /* Distribución equitativa de los elementos */
+    align-items: center;
+}
+
+  
+  .header-container h1 {
+    margin: 0;
+    font-size: 55px; /* Aumenta el tamaño del título */
+  }
+  
+  .header-container a {
+    text-decoration: none;
+    color: #fffdf0;
+    font-size: 24px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px 20px; /* Agrega más espacio alrededor del enlace */
+    background-color: #dfa476; /* Cambia el color de fondo del enlace */
+    border: 5px solid #242526; /* Agregamos un borde al "botón" */
+    border-radius: 10px; /* Agregamos bordes redondeados */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .header-container a:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el cursor */
+  }
+  
+  /* Estilos para el contenedor principal de la página */
+  main {
+    grid-column: span 2;
+    padding: 20px;
+  }/* Estilos para las secciones de productos */
+
+
+
+
+
+  /*  ---------PRODUCTOS ------------------------------- */
+h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.productos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* Aumenta el espacio entre los contenedores de productos */
+    padding: 12px;
+    margin: 30px 250px  ;
+}
+
+/* Estilos para el contenedor de productos de pan */
+.productos-izquierda {
+    grid-column: 1; /* Asigna el contenedor de pan a la primera columna */
+    grid-area: 1;
+}
+
+/* Estilos para el contenedor de productos de bebida */
+.productos-derecha {
+    grid-column: 2; /* Asigna el contenedor de bebida a la segunda columna */
+    grid-area: 1;
+}
+/* Estilos para el contenedor de productos */
+.producto {
+
+    border: 3px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 20px 10px rgba(0, 0, 1, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e1d9ce;
+    margin: 30px 40px; /* Reduce el margen para hacer que los contenedores se vean más cercanos */
+    max-width:600px;
+    max-height:800px;
+
+}
+
+/* Estilos para las imágenes de los productos */
+.producto img {
+    max-width: 50%; /* La imagen ocupará la mitad del contenedor */
+    max-height: auto; /* Asegura que la altura se ajuste automáticamente para mantener la proporción */
+    margin-bottom: 5px; /* Reduce el margen inferior de la imagen */
+    border-radius: 15px;
+}
+
+/* Estilos para los títulos de productos */
+.producto h2 {
+    font-size: 30px; /* Reduce el tamaño de la fuente del título */
+    margin-bottom: 5px; /* Reduce el margen inferior del título */
+    text-transform: uppercase;
+}
+
+/* Estilos para los párrafos de productos */
+.producto p {
+    font-size: 24px; /* Reduce el tamaño de la fuente del texto */
+    margin-bottom: 5px; /* Reduce el margen inferior del texto */
+    flex-grow: 1;
+    margin: 2px;
+}
+
+/* Estilos para los botones "Agregar al Carrito" */
+.agregar-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Reduce el margen superior del botón agregar*/
+}
+
+.cantidad-input {
+    width: 60px; /* Reduce el ancho del input de cantidad */
+    margin-bottom: 5px; /* Reduce el margen inferior del input de cantidad */
+    padding: 8px;
+}
+
+.carrito-btn {
+    background-color: #c176df;
+    color: rgb(28, 26, 26);
+    border: none;
+    padding: 10px 50px; /* Reduce el padding del botón */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px; /* Reduce el tamaño de la fuente del botón */
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.carrito-btn:hover{
+    background-color: #7bb47c;
+}
+
+
+.salir{
+    text-align: left;
+    font-size: 40px;
+    position: relative;
+}
+
+/*  TABLA DE CARRITO  */
+/* Estilos para la tabla del carrito */
+.carrito-venta table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 4px solid #ccc; /* Agrega un borde alrededor de la tabla */
+    border-radius: 10px;
+}
+
+.carrito-venta th, .carrito-venta td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+.carrito-venta th {
+    background-color: #e1d9ce; /* Cambia el color de fondo de las celdas de encabezado */
+    font-weight: bold; /* Resalta el texto del encabezado */
+    
+}
+
+/* Estilos para las imágenes en el carrito */
+.carrito-imagen {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+/* Estilos para los botones en la tabla */
+.carrito-venta button {
+    background-color: #c176df;
+    color: rgb(28, 26, 26);
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.carrito-venta button:hover {
+    background-color: #7bb47c;
+}
+.carrito-vacio {
+    text-align: center;
+    display: none;
+    font-size: 20px; /* Ajusta el tamaño de fuente si es necesario */
+    color: red; /* Cambia el color del texto si es necesario */
+}

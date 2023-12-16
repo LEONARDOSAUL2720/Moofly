@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI';
+}
+
+/* Definimos la animación */
+@keyframes recorrer-color {
+  0% {
+    background-position: left bottom;
+    /* Posición inicial en la esquina inferior izquierda */
+  }
+
+  100% {
+    background-position: right top;
+    /* Posición final en la esquina superior derecha */
+  }
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  min-height: 100vh;
+
+  background-image: url(img/gif/54e103cf-bf3d-41ef-9145-573527efaaab.gif);
+  background-repeat: no-repeat;
+  /* Evitar que la imagen se repita */
+  background-size: cover;
+  /* Ajustar la imagen para que cubra todo el fondo */
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  /* Convertimos el contenedor en un flex container */
+  align-items: center;
+  /* Centramos verticalmente el contenido */
+  flex-direction: column;
+  /* Cambiamos la dirección de los elementos a columna */
+  width: 100%;
+  background-size: cover;
+  color: rgb(22, 27, 27);
+
+}
+
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Estilos para el contenedor de la imagen del logo */
+
+div>a.btn {
+  display: flex;
+  /* Convertimos los enlaces en flex containers */
+  justify-content: center;
+  /* Centramos horizontalmente los enlaces */
+}
+
+.encabezado {
+  text-align: left;
+  font-size: 100px;
+  font-family: 'Morganite free font';
+  font-size: 90px;
+}
+
+a {
+  overflow: hidden;
+  text-decoration: none;
+  font-family: 'Morganite free font';
+  }
+
+/* Para centrar horizontalmente el contenido dentro del enlace */
+a.btn {
+  display: flex;
+  /* Convertimos los enlaces en flex containers */
+  justify-content: center;
+  /* Centramos horizontalmente los enlaces */
+}
+
+/* O si prefieres usar text-align para centrar el contenido */
+a.btn {
+  display: inline-block;
+  text-align: center;
+}
+
+a {
+  position: relative;
+  overflow: hidden;
+  color: var(#E0C391);
+  text-decoration: none;
+  /* Quitar el subrayado de los enlaces */
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 50px;
+  /* Agregamos el margen aquí */
+  border-radius: 25px;
+  /* Contorno redondo */
+  border: 6px solid rgb(180, 135, 207);
+  /* Contorno de color blanco */
+  background-color: transparent;
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 12px 80px; /* Ajusta el padding para hacer el botón más largo */
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  /* Transición de 0.3 segundos para el cambio de color */
+  font-size: 30px;
+}
+
+.btn:hover {
+  background-color: #3eb0d3;
+  color: #090808;
+  padding: 20px 50px; /* Ajusta el padding para hacer el botón más largo */
+  font-size: 30px;
+}
+/* ------------------------- NOSOTROS ------------------------------ */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columnas con tamaño flexible */
+  gap: 20px;
+  width: 100%;
+  margin: auto;
+}
+
+.grid-item img {
+   
+  width: 100%;
+  /* Ajustamos el tamaño de las imágenes al ancho de su contenedor */
+  border-radius: 10px;
+  /* Bordes redondeados para las imágenes */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI';
+}
+
+
+/* Estilos para el contenedor de "Sobre nosotros" */
+.contenedor-nosotros {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  /* Cambia el color del texto */
+  margin-top: 400px;
+  padding: 30px;
+  /* Agrega un espacio interno para separar el contenido del borde */
+  text-align: left;
+  font-size: 30px;
+  border-radius: 10px 30px;
+  /* Agrega bordes redondeados al contenedor */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Agrega una sombra suave al contenedor */
+}
+
+.contenedor-nosotros h1 {
+  
+  font-family: 'Morganite free font';
+  font-size: 40px;
+  /* Tamaño de fuente más grande para el título */
+  font-weight: bold;
+  /* Texto en negrita */
+  margin-bottom: 20px;
+  /* Agrega un espacio entre el título y el párrafo */
+}
+
+.contenedor-nosotros p {
+  opacity: 0;
+  /* Inicialmente, oculta el párrafo */
+  position: relative;
+  bottom: -50px;
+  /* Posición inicial para dar un efecto de deslizamiento desde abajo */
+  animation: aparecer 1s ease-out forwards;
+  /* Animación de aparecer */
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    bottom: 0;
+    /* Posición final, aparecerá en la parte inferior del contenedor */
+  }
+}
+
+
+
+
+
+
+/* ------------------------- FUNDADOR ------------------------------ */
+/* Estilos para el contenedor de "grid-fundador" */
+.grid-fundador {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Dos columnas de tamaño flexible */
+  gap: 50px;
+  /* Espacio entre los elementos dentro del grid-fundador */
+  margin-top: 20px;
+  /* Ajusta el margen superior para separar del grid-item */
+  background-color: rgba(129, 108, 87, .9 );
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 10px 30px;
+  /* Agrega bordes redondeados al contenedor */
+
+}
+
+/* Estilos para la clase contenedor-imagen */
+.contenedor-imagen {
+  display: flex;
+  /* Usamos flexbox para alinear la imagen verticalmente */
+  align-items: center;
+  /* Centramos la imagen verticalmente */
+
+}
+
+/* Estilos para la imagen del fundador dentro de "contenedor-imagen" */
+.contenedor-imagen img {
+
+  width: 70%;
+  /* Ajusta el tamaño de la imagen al ancho del contenedor */
+  border-radius: 5px;
+  /* Bordes redondeados para la imagen */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  /* Agrega una sombra suave a la imagen */
+  margin: 20px 50px;
+}
+
+/* Estilos para la clase contenedor-parrafo */
+.contenedor-parrafo {
+  text-align: left;
+  /* Alineamos el texto a la izquierda */
+  font-size: 23px;
+  margin: 10px 40px;
+}
+
+/* Estilos para el título "Te presentamos a nuestro fundador" dentro de "contenedor-parrafo" */
+.contenedor-parrafo h1 {
+  font-size: 30px;
+  /* Tamaño de fuente más grande para el título */
+  font-weight: bold;
+  /* Texto en negrita */
+  margin-bottom: 20px;
+  /* Agrega un espacio entre el título y el contenido */
+  color: #31302f;
+}
+
+
+
+
+/* ------------------------- MAPA ------------------------------ */
+/* Estilos para el contenedor de "grid-mapa" */
+.grid-mapa {
+  /* overflow: scroll; /* Muestra siempre las barras de desplazamiento 
+  view-timeline: --revealing-image;
+  animation-name: show;
+  animation-fill-mode: both;
+  animation-timeline: --revealing-image;
+  animation-range: entry 25% cover 50%; */
+  display: grid;
+  grid-template-columns: 1fr;
+  /* 2 columnas con tamaño flexible */
+  gap: 20px;
+  /* Espacio entre los elementos dentro del grid-mapa */
+  margin-top: 40px;
+  /* Ajusta el margen superior para separar del grid-fundador */
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Estilos para el contenedor de "contenedor-mapa" */
+.contenedor-mapa {
+
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  /* Agrega un espacio interno para separar el contenido del borde */
+  border-radius: 20px 20px;
+  /* Agrega bordes redondeados al contenedor */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Agrega una sombra suave al contenedor */
+}
+
+/* Estilos para el título "Te esperamos en ..." */
+.contenedor-mapa h1 {
+  font-size: 30px;
+  /* Tamaño de fuente más grande para el título */
+  font-weight: bold;
+  /* Texto en negrita */
+  margin-bottom: 20px;
+  /* Agrega un espacio entre el título y el contenido */
+  color: #514565;
+  text-align: center;
+}

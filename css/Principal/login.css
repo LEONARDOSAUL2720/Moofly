@@ -1,0 +1,266 @@
+body, html{
+  
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+header {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   padding: 2rem;
+   background-color: #1f1f1f;
+   
+  /* background-color: #0f100e; */
+   /* background-color: #1a1416; */
+  text-align: center ;
+  
+}
+.encabezado{
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Hace que el color del texto sea transparente */
+  font-size: 50px;
+  font-family: 'Morganite free font';
+  background-image: linear-gradient(90deg, #e1d9ce, #ebc357, #E0C391); /* Define el degradado de colores */
+  background-size: 200% auto; /* Ajusta el tamaño del degradado */
+  animation: recorrerColores 4s linear infinite; /* Aplica la animación */
+  border-radius: black;
+}
+
+/* Definir la animación para recorrer los colores */
+@keyframes recorrerColores {
+  0% {
+    background-position: 0% center; /* Comienza desde la izquierda */
+  }
+  50% {
+    background-position: 100% center; /* Termina en la derecha */
+  }
+  50%{
+    background-position: 100% center; /* Termina en la derecha */
+  }
+}
+
+.header a {
+  font-family: 'Morganite free font';
+  color: #cccccc;
+  text-decoration: none;
+  margin-right: 0px;
+  margin-top: 0px;
+  font-size: 35px;
+  width: 100%;
+  transition: transform 0.3s; /* Agrega una transición para suavizar el efecto de escala */
+}
+
+.header a:hover {
+  color: rgb(74, 180, 104);
+  transform: scale(4); /* Hace que el enlace se haga un 20% más grande */
+}
+
+/* Estilo para el enlace "Regresar" en el header */
+.link {
+  position: relative;
+  color: #e1d9ce;
+  text-decoration: none;
+  
+}
+
+
+.link::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e1d9ce;
+  animation: recorrerMargen 2s infinite;
+}
+
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e1d9ce;
+  animation: recorrerMargen 2s infinite;
+}
+
+/* Definir la animación */
+@keyframes recorrerMargen {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+
+/*  --------------------------------------------------------- */
+main {
+  /* Estilos del contenido principal */
+  padding: 20px;
+  
+  background-image: url(../../img/gif/COFFEE\ ADDICTS.gif);
+  /* min-height: calc(100vh - 200px); Ajusta el valor según sea necesario */
+  min-height: calc(100vh - 200px); /* Ajusta el valor según sea necesario */
+
+  .animacion{
+    position: relative;
+    overflow: hidden;
+ 
+}
+.main.dynamic-height {
+  min-height: auto;
+}
+}
+
+
+.form-container {
+  /* Elimina la posición relativa para que el mensaje de error se ajuste correctamente */
+  flex-direction: column;
+  align-items: center; /* Centrar horizontalmente */
+}
+
+/* Mueve la regla de .error-message fuera del bloque .form-container */
+.error-message {
+  padding: 20px;
+  background-color: #0e0a1d;
+  color: rgb(234, 229, 229);
+  font-size: 40px;
+  text-align: center;
+  opacity: 0; /* Inicialmente, ocultamos el mensaje de error */
+  animation: fadeInOut 3s ease-in-out forwards; /* Aplicamos la animación con duración de 3 segundos */
+  width: 100%; /* Ajustamos el ancho del mensaje al 100% del formulario */
+  position: relative; /* Cambiamos la posición a relativa para que se ajuste al centro automáticamente */
+  border-radius: 5px;
+  z-index: 999; /* Aseguramos que el mensaje aparezca por encima de otros elementos */
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0; /* Al inicio y al final, el mensaje está oculto */
+  }
+  50% {
+    opacity: 1; /* Al 50% de la animación, el mensaje aparece con opacidad máxima */
+  }
+}
+
+/* Estilo para el logo */
+.logo {
+  width: 200px; /* Ajusta el ancho del logo según tus necesidades */
+  height: auto; /* Hace que la altura se ajuste automáticamente */
+  position: absolute; /* Posición absoluta para colocar el logo en la esquina */
+  top: 10px; /* Distancia desde la parte superior del header */
+  left: 30px; /* Distancia desde la parte izquierda del header */
+}
+
+/* Estilo para el contenedor del logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+ 
+}
+
+.titulo-formulario {
+  text-align: center;
+  color: rgb(235, 195, 87) ;
+  margin: 0;
+  font-size: 50px;
+  font-family: 'poiret one';
+}
+form {
+  max-width: 700px;
+  min-height: 200px;
+  margin: 0px auto;
+  padding: 20px;
+  background-color: rgb(12, 33, 51);
+  color: white;
+  border-radius: 10px;
+  
+}
+label{
+  font-size: 50px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 20px;
+  color: #0e0a1d;
+  box-sizing: border-box; /* Agregado */
+}
+.icono-moofly{
+  width: 100px; /* Ajusta el ancho del logo según tus necesidades */
+  height: auto; /* Hace que la altura se ajuste automáticamente */
+  position: center; /* Posición absoluta para colocar el logo en la esquina */
+  top: 3px; /* Distancia desde la parte superior del header */
+  left: center; /* Distancia desde la parte izquierda del header */
+}
+
+input[type="submit"],
+a.boton {
+  display: block;
+  
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(44, 36, 74);
+  color: rgb(235, 195, 87);
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  font-family: 'Morganite free font';
+
+}
+
+
+
+input[type="submit"]:hover,
+a.boton:hover {
+  background-color: rgb(159, 183, 208);
+  color: #000;
+}
+
+
+
+footer {
+  /* Estilos del footer */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background-color: #1a1416; */
+  background-color: #1f1f1f;
+  color: #e1d9ce;
+  padding: 13px;
+  text-align: center;
+  font-family: 'Morganite free font';
+  font-size: 24px;
+}

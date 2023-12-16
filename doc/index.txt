@@ -1,0 +1,302 @@
+body{
+    /* background-color: #1f252d; */
+    background-color: #1d2026; /* Fondo café claro */
+     color: #333; /* Letras oscuras */
+}
+.header {
+    position: relative;
+    padding: 10px;
+    height: 400px;
+    background-color: #e1d9ce;
+    
+  }
+  
+  nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+  }
+  .izquierda-link, 
+  .derecha-link {
+    position: relative; /* Asegurarse de que las etiquetas tengan una posición relativa */
+    z-index: 3; /* Establecer un z-index más alto para las etiquetas */
+  }
+ 
+   .izquierda-link::after, 
+   .derecha-link::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    animation: recorrerMargen 2s infinite;
+  }
+
+
+    /* Definir la animación */
+  @keyframes recorrerMargen {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  /* Estilos para las etiquetas <a> */
+  a {
+    text-decoration: none;
+    margin: auto;
+    font-size: 40px; /* Tamaño de fuente deseado */
+    font-family: "malaga"; /* Tipo de letra deseado */
+    transition: color 0.5s, font-size 0.5s; /* Transiciones de animación */
+    color:black;
+  }
+    
+ 
+    /* Estilos para las etiquetas <a> en el estado :hover */
+  a:hover {
+    color: blue; /* Color al posicionar el cursor sobre la etiqueta */
+    font-size: 50px; /* Tamaño de fuente al posicionar el cursor sobre la etiqueta */
+  }
+  
+/* .left-link {
+    position: absolute;
+    left: 0;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+  
+  .right-link {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+  } */
+
+/* --------------------------------------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+  text-align: center;
+  
+}
+
+.logo img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 400px; /* Cambia el valor según el tamaño deseado */
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    filter: brightness(70%);
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  filter: brightness(90%);
+  animation: sacarVapor 2s ease-out, brillarContorno 2s infinite;
+}
+@keyframes brillarContorno {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(9, 1, 1, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(243, 237, 237, 0.908);
+  }
+}
+
+@keyframes sacarVapor {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.banner p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px; /* Cambia el tamaño de fuente a tu preferencia */
+    color: #e1d9ce;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 80%;
+}
+
+/*  -------------------------------------------- */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    border-left: 2px solid #f8ed90; /* Línea izquierda */
+    border-right: 2px solid #f8ed90;
+   
+  }
+  
+  .nos-ubicamos {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+    background-color: gainsboro;
+    font-size: 50px;
+    padding:  20px  ;
+    width: 100%; /* Agrega esta propiedad para que ocupe todo el ancho */
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+  }
+  /* Estilos para el contenedor principal */
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+  border-left: 2px solid #f8ed90; /* Línea izquierda */
+  border-right: 2px solid #f8ed90; /* Línea derecha */
+  
+  
+}
+
+/* Estilos para el contenedor del mapa */
+.map-container {
+  flex: 1;
+  margin-right: 20px; /* Espacio entre el mapa y el contenido  */
+}
+
+/* Estilos para el mapa */
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+/* Estilos para el contenedor del párrafo */
+.info-container {
+  flex: 1;
+}
+
+/* Estilos para el párrafo */
+.info-container p {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: justify;
+  font-size: 30px;
+  color: white;
+  margin: 0 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+
+.main-container2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+  border-left: 2px solid #f8ed90; /* Línea izquierda */
+  border-right: 2px solid #f8ed90; /* Línea derecha */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+  
+  /* Estilos para el contenedor de la imagen del fundador */
+.img-fundador {
+  flex: 1;
+  text-align: right; /* Alinea la imagen a la derecha */
+  margin-right: 20px 50px; /* Espacio entre la imagen y el */
+}
+
+/* Estilos para la imagen del fundador */
+.img-fundador img {
+  max-width: 800px; /* Ajusta el tamaño de la imagen */
+  border: 2px solid black; /* Añade un borde negro a la imagen */
+}
+
+/* Estilos para el contenedor del párrafo */
+.info-fundador {
+    flex: 1;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 30px;
+    color: white;
+    margin: 0 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+/* Estilos para el contenedor principal */
+.main-container, .main-container2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+  border-left: 2px solid #f8ed90; /* Línea izquierda */
+  border-right: 2px solid #f8ed90; /* Línea derecha */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+
+/* Añade el siguiente código para que los elementos se muevan con el desplazamiento */
+
+
+  
+  
+  
+    
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 40px; /* Agregamos el margen aquí */
+  border-radius: 25px; /* Contorno redondo */
+  border: 6px solid white; /* Contorno de color blanco */
+  background-color: transparent;
+  color: #E0C391;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s; /* Transición de 0.3 segundos para el cambio de color */
+  font-size: 15px;
+}
+
+.btn:hover {
+  color: white; /* Cambiar el color del texto al pasar el cursor */
+  background-color: #E0C391; /* Cambiar el fondo al pasar el cursor */
+}
+
+.btn span {
+  position: absolute;
+  display: block;
+  background: #E0C391; /* Color de fondo original */
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s; /* Transición de 0.3 segundos para el desplazamiento de color */
+}
+
+.btn:hover span {
+  width: 50%; /* Expandir el color al pasar el cursor */
+  left: 100%; /* Mover el color hacia la derecha al pasar el cursor */
+}

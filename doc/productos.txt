@@ -1,0 +1,81 @@
+<?php
+include("db.php");
+
+// Código para obtener los productos desde la base de datos agrupados por tipo
+$sql = "SELECT * FROM vista_ProductoDetalleIMG ";
+$result = mysqli_query($conexion, $sql);
+
+if (!$result) {
+    die('Error al ejecutar la consulta: ' . mysqli_error($conexion));
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOOFLY </title>
+    <link rel="shortcut icon" href="../img/favicon (1).ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon (1).ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/usuario/mostrarProductos.css">
+</head>
+
+<body>
+    <div>
+    <h1>BIENVENIDO </h1>
+  </div>
+
+ 
+
+
+
+    <div class="productos-container">
+    <!-- Loop para mostrar los productos -->
+    <?php
+  
+
+  while ($producto = mysqli_fetch_assoc($result)) {
+    echo '<div class="producto ' . ($producto['tipo_producto'] === 'panel' ? 'panel' : 'bebida') . '">';
+    echo '<h2>' . $producto['nombre'] . '</h2>';
+    echo '<img src="' . $producto['imagen'] . '" alt="' . $producto['nombre'] . '">';
+    echo '<p>' . $producto['descripccion'] . '</p>';
+    echo '<p>Existencias: ' . $producto['existencias'] . '</p>';
+    echo '<p>Precio: ' . $producto['precio'] . '</p>';
+    echo '<div class="agregar-carrito">';
+    echo '<input type="number" class="cantidad-input" min="1" value="1">';
+    echo '<button class="carrito-btn" onclick="agregarAlCarrito(' . $producto['codigo'] . ')">Agregar al Carrito</button>';
+    echo '</div>';
+    echo '</div>';
+}
+
+
+    ?>
+
+    <!-- Resto del código HTML -->
+
+    <script>
+        function agregarAlCarrito(codigoProducto) {
+            var cantidad = parseInt(prompt('Ingrese la cantidad que desea comprar:'));
+            if (isNaN(cantidad) || cantidad <= 0) {
+                alert('La cantidad ingresada no es válida.');
+                return;
+            }
+
+            // Asigna el valor del código de producto al campo oculto antes de enviar el formulario
+            document.querySelector('input[name="codigoProducto"]').value = codigoProducto;
+
+            // Envía el formulario al archivo proceso_compra.php
+            document.querySelector('form').submit();
+        }
+    </script>
+    </div>
+</body>
+
+</html>
+
+<?php
+// Cierra la conexión a la base de datos
+mysqli_close($conexion);
+?>

@@ -1,0 +1,244 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #d7d4d0;  */
+    background-image: url(../../img/gif/naranaja.gif);
+    background-size: cover; /* Ajustar la imagen de fondo para cubrir toda la pantalla */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    background-attachment: fixed; /* Mantener la imagen fija en la ventana de visualización */
+    
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav {
+    text-align: center; /* Centrar el contenido del menú horizontalmente */
+    background-color: #556a76; /* Color de fondo del menú */
+    margin: 5px 0px;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Utilizamos flexbox para que los elementos sean flexibles */
+}
+nav ul li.subopciones.visible {
+    display: block;
+    color: #060608;
+}
+
+nav ul li {
+    flex: 1; /* Cada li ocupará el espacio disponible igualmente */
+    padding: 10px; /* Espaciado entre los elementos li */
+    display: flex; /* Utilizamos flexbox para centrar el contenido verticalmente */
+    justify-content: center; /* Centramos el contenido horizontalmente */
+    position: relative; /* Ajustamos la posición relativa para que las opciones sean posicionadas relativas a este li */
+    color:rgb(230, 229, 236);
+}
+
+/* Estilos para enlaces y menú desplegable */
+nav ul li a {
+    display: block;
+    color: #161518;
+    text-decoration: none;
+    transition: background-color 2s, color 2s; /* Agregamos una transición de 0.3 segundos para el cambio de color de fondo y color del texto */
+    padding: 10px 20px; /* Espaciado dentro del "botón" */
+    border: 5px solid #242526; /* Agregamos un borde al "botón" */
+    border-radius: 10px; /* Agregamos bordes redondeados */
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    background-color: #d2b895;
+    color: rgb(15, 14, 14);
+    border-color: #2573a4;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #9fa7b1;
+    color: #060608;
+    padding: 0;
+    width: 80%; /* Ajustamos el ancho del menú desplegable al 100% del li padre */
+}
+
+nav ul li:hover ul {
+    display: block;
+    color: #060608;
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+/* Estilos para botones y elementos visuales adicionales */
+button {
+    padding: 20px  20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #907834;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.contenido-opcion {
+    display: none;
+}
+
+.mensaje{
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #0e0a1d;
+    color: rgb(234, 229, 229);
+    font-size: 50px;
+    text-align: center;
+    opacity: 0; /* Inicialmente, ocultamos el mensaje de error */
+    animation: fadeInOut 3s ease-in-out forwards; /* Aplicamos la animación con duración de 3 segundos */
+     max-width: 800px; /* Ajustamos el ancho del mensaje al 100% del formulario */
+    border-radius: 5px;
+    z-index: 999; /* Aseguramos que el mensaje aparezca por encima de otros elementos */
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0; /* Al inicio y al final, el mensaje está oculto */
+    }
+    50% {
+      opacity: 1; /* Al 50% de la animación, el mensaje aparece con opacidad máxima */
+    }
+  }
+  
+  /* formularios */
+ 
+ 
+
+  h1 {
+    text-align: center;
+    margin: 30px 0;
+    color: #0f0e0e;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #e1d9ce;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(80, 182, 121, 0.961);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+   
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    background-color: #1f1f1f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(81, 69, 101, 0.8);
+}
+
+.mensaje-registro{
+    margin: 25px auto;
+    padding: 3px;
+    background-color: #0e0a1d;
+    color: rgb(234, 229, 229);
+    font-size: 20px;
+    text-align: center;
+    opacity: 0; /* Inicialmente, ocultamos el mensaje de error */
+    animation: fadeInOut 3s ease-in-out forwards; /* Aplicamos la animación con duración de 3 segundos */
+     max-width: 800px; /* Ajustamos el ancho del mensaje al 100% del formulario */
+    border-radius: 5px;
+    z-index: 999; /* Aseguramos que el mensaje aparezca por encima de otros elementos */
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0; /* Al inicio y al final, el mensaje está oculto */
+    }
+    50% {
+      opacity: 1; /* Al 50% de la animación, el mensaje aparece con opacidad máxima */
+    }
+  }
+  table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(80, 182, 121, 0.961);
+    border-radius: 30px;
+    font-size: 25px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #d2b895;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: rgba(81, 69, 101, 0.8);
+    color: #fff;
+}
